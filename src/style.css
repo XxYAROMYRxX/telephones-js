@@ -1,0 +1,168 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: #1e1e2f;
+color: #fff;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.container {
+width: 90%;
+max-width: 500px;
+background: #2b2b40;
+padding: 30px;
+border-radius: 16px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.form {
+display: flex;
+flex-direction: column;
+gap: 15px;
+margin-bottom: 25px;
+}
+
+.form input {
+width: 100%;
+padding: 14px 16px;
+border: 2px solid #41415c;
+border-radius: 8px;
+background: #1e1e2f;
+color: #fff;
+font-size: 16px;
+outline: none;
+transition: border-color 0.3s;
+}
+
+.form input::placeholder {
+color: #9999ad;
+}
+
+.form input {
+border-color: #7c7cff;
+}
+
+.form button {
+padding: 14px;
+border: none;
+border-radius: 8px;
+background: #6c63ff;
+color: #fff;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: background 0.3s, transform 0.2s;
+}
+
+.form button::after {
+content: "Add contact";
+}
+
+.form button {
+background: #554be8;
+}
+
+.form button {
+transform: scale(0.98);
+}
+
+.list {
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.list li {
+padding: 15px;
+background: #383850;
+border-radius: 8px;
+border-left: 4px solid #7c7cff;
+transition: transform 0.2s, background 0.2s;
+}
+
+.list li {
+background: #41415c;
+transform: translateX(5px);
+}
+
+@media (max-width: 480px) {
+.container {
+padding: 20px;
+}
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background: #383850;
+    border-radius: 10px;
+    border-left: 4px solid #7c7cff;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.item:hover {
+    background: #41415c;
+    transform: translateY(-3px);
+}
+
+.item .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.item .text {
+    font-size: 16px;
+    color: #b8b8cc;
+}
+
+.item button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.item button:active {
+    transform: scale(0.97);
+}
+
+.item .edit {
+    background: #6c63ff;
+    color: #fff;
+}
+
+.item .edit:hover {
+    background: #554be8;
+}
+
+.item .delete {
+    background: #e05252;
+    color: #fff;
+}
+
+.item .delete:hover {
+    background: #c93d3d;
+}
+.item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.item .title,
+.item .text {
+    grid-column: 1 / -1;
+}
